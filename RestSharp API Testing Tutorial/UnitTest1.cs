@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using RestSharp;
 using RestSharp.Serialization.Json;
@@ -16,9 +17,10 @@ namespace RestSharp_API_Testing_Tutorial
             var request = new RestRequest("posts/{postid}", Method.GET);
             request.AddUrlSegment("postid", 1);
 
-            var content = client.Execute(request).Content;
+            var content = client.Execute(request);
 
-            var deserialize = new JsonDeserializer
+            var deserialize = new JsonDeserializer();
+            deserialize.Deserialize<Dictionary<string, string>>(content);
         }
     }
 }
