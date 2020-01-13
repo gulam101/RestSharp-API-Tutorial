@@ -20,7 +20,7 @@ namespace RestSharp_API_Testing_Tutorial
             var response = client.Execute(request);
 
             var deserialize = new JsonDeserializer();
-            deserialize.Deserialize<Dictionary<string, string>>(response);
+            var output = deserialize.Deserialize<Dictionary<string, string>>(response);
         }
     }
 }
