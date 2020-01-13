@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using RestSharp;
 
 namespace RestSharp_API_Testing_Tutorial
 {
@@ -9,6 +10,7 @@ namespace RestSharp_API_Testing_Tutorial
         [TestMethod]
         public void TestMethod1()
         {
+            var client = new RestClient("http://localhost:3000/");
         }
     }
 }
