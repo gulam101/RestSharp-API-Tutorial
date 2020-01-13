@@ -33,3 +33,6 @@ D:\Projects\C# Projects\TestingAPI\RestSharp API Testing Tutorial\obj\Debug\Rest
 D:\Projects\C# Projects\TestingAPI\RestSharp API Testing Tutorial\obj\Debug\RestSharp API Testing Tutorial.csproj.CopyComplete
 D:\Projects\C# Projects\TestingAPI\RestSharp API Testing Tutorial\obj\Debug\RestSharp API Testing Tutorial.dll
 D:\Projects\C# Projects\TestingAPI\RestSharp API Testing Tutorial\obj\Debug\RestSharp API Testing Tutorial.pdb
+D:\Projects\C# Projects\TestingAPI\RestSharp API Testing Tutorial\bin\Debug\nunit.framework.dll
+D:\Projects\C# Projects\TestingAPI\RestSharp API Testing Tutorial\bin\Debug\nunit.framework.pdb
+D:\Projects\C# Projects\TestingAPI\RestSharp API Testing Tutorial\bin\Debug\nunit.framework.xml

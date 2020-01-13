@@ -22,6 +22,7 @@ namespace RestSharp_API_Testing_Tutorial
             var deserialize = new JsonDeserializer();
             var output = deserialize.Deserialize<Dictionary<string, string>>(response);
             var result = output["author"];
+            Assert.That(result, Is.EqualTo("Karthik KK"), "Author is not correct");
         }
     }
 }
