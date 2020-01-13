@@ -15,7 +15,7 @@ namespace RestSharp_API_Testing_Tutorial
             var request = new RestRequest("posts/{postid}", Method.GET);
             request.AddUrlSegment("{postid", 1);
 
-            var content = client.Excute(request).Content;
+            var content = client.Execute(request).Content;
         }
     }
 }
