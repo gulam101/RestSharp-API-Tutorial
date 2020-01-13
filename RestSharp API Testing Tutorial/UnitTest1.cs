@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using RestSharp;
+using RestSharp.Serialization.Json;
 
 namespace RestSharp_API_Testing_Tutorial
 {
@@ -16,6 +17,8 @@ namespace RestSharp_API_Testing_Tutorial
             request.AddUrlSegment("postid", 1);
 
             var content = client.Execute(request).Content;
+
+            var deserialize = new JsonDeserializer
         }
     }
 }
