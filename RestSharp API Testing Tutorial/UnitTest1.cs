@@ -27,7 +27,7 @@ namespace RestSharp_API_Testing_Tutorial
 
             JObject obs = JObject.Parse(response.Content);
 
-            Assert.That(obs["author"].toString(), Is.EqualTo("Karthik KK"), "Author is not correct");
+            Assert.That(obs["author"].ToString(), Is.EqualTo("Karthik KK"), "Author is not correct");
         }
     }
 }
