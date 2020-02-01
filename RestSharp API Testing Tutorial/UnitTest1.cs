@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using NUnit.Framework;
 using RestSharp;
 using RestSharp.Serialization.Json;
+using RestSharp.Deserializers;
+using Newtonsoft.Json.Linq;
 
 namespace RestSharp_API_Testing_Tutorial
 {
@@ -19,10 +21,13 @@ namespace RestSharp_API_Testing_Tutorial
 
             var response = client.Execute(request);
 
-            var deserialize = new JsonDeserializer();
-            var output = deserialize.Deserialize<Dictionary<string, string>>(response);
-            var result = output["author"];
-            Assert.That(result, Is.EqualTo("Karthik KK"), "Author is not correct");
+            //var deserialize = new JsonDeserializer();
+            //var output = deserialize.Deserialize<Dictionary<string, string>>(response);
+            //var result = output["author"];
+
+            JObject obs = JObject.Parse(response.Content);
+
+            Assert.That(obs["author"].toString(), Is.EqualTo("Karthik KK"), "Author is not correct");
         }
     }
 }
