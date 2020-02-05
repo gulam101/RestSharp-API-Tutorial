@@ -12,7 +12,7 @@ namespace RestSharp_API_Testing_Tutorial
     public class UnitTest1
     {
         [Test]
-        public void TestMethod1()
+        public void GettingStarted()
         {
             //Establishes our client and allows it to connect to the URL
             var client = new RestClient("http://localhost:3000/");
@@ -43,6 +43,12 @@ namespace RestSharp_API_Testing_Tutorial
         [Test]
         public void PostWithAnonymousBody()
         {
+            //Establishes our client and allows it to connect to the URL
+            var client = new RestClient("http://localhost:3000/");
+
+            //In Postman we can use the GET to specfify specfific data
+            var request = new RestRequest("posts/{postid}/profile", Method.POST);
+            request.AddUrlSegment("postid", 1);
 
         }
     }
