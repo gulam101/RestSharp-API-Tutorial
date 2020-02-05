@@ -14,14 +14,14 @@ namespace RestSharp_API_Testing_Tutorial
         [Test]
         public void TestMethod1()
         {
-            // Establishes our client and allows it to connect to the URL
+            //Establishes our client and allows it to connect to the URL
             var client = new RestClient("http://localhost:3000/");
 
-            // In Postman we can use the GET to specfify specfific data
+            //In Postman we can use the GET to specfify specfific data
             var request = new RestRequest("posts/{postid}", Method.GET);
             request.AddUrlSegment("postid", 1);
 
-            // Executes the request
+            //Executes the request
             var response = client.Execute(request);
 
             //var deserialize = new JsonDeserializer();
