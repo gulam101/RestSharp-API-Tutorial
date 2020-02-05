@@ -63,7 +63,7 @@ namespace RestSharp_API_Testing_Tutorial
             var output = deserialize.Deserialize<Dictionary<string, string>>(response);
             var result = output["name"];
 
-            Assert.That(result, Is.EqualTo("Raj"), "Author is not correct");
+            Assert.That(result, Is.EqualTo("Sam"), "Author is not correct");
 
         }
     }
