@@ -54,6 +54,9 @@ namespace RestSharp_API_Testing_Tutorial
 
             request.AddUrlSegment("postid", 1);
 
+            //Executes the request
+            var response = client.Execute(request);
+
         }
     }
 }
