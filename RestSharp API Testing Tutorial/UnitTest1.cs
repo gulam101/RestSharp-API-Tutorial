@@ -24,10 +24,17 @@ namespace RestSharp_API_Testing_Tutorial
             //Executes the request
             var response = client.Execute(request);
 
-            //var deserialize = new JsonDeserializer();
-            //var output = deserialize.Deserialize<Dictionary<string, string>>(response);
-            //var result = output["author"];
 
+
+            //This is used to export application data into a file, which we can read
+
+            /*var deserialize = new JsonDeserializer();
+            var output = deserialize.Deserialize<Dictionary<string, string>>(response);
+            var result = output["author"];
+            */
+
+
+            //Another way of exporting data from a file
             JObject obs = JObject.Parse(response.Content);
 
             Assert.That(obs["author"].ToString(), Is.EqualTo("Karthik KK"), "Author is not correct");
