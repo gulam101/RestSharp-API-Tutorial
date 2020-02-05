@@ -37,7 +37,7 @@ namespace RestSharp_API_Testing_Tutorial
             //Another way of exporting data from a file
             JObject obs = JObject.Parse(response.Content);
 
-            Assert.That(obs["author"].ToString(), Is.EqualTo("Karthik KK"), "Author is not correct");
+            Assert.That(obs["author"].ToString(), Is.EqualTo("George BB"), "Author is not correct");
         }
     }
 }
