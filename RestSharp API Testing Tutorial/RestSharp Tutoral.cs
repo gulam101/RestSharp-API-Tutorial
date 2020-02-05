@@ -39,6 +39,12 @@ namespace RestSharp_API_Testing_Tutorial
 
             Assert.That(obs["author"].ToString(), Is.EqualTo("George BB"), "Author is not correct");
         }
+
+        [Test]
+        public void PostWithAnonymousBody()
+        {
+
+        }
     }
 }
 
