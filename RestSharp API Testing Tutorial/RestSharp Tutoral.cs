@@ -50,12 +50,20 @@ namespace RestSharp_API_Testing_Tutorial
             //POST sends data to the server
             var request = new RestRequest("posts/{postid}/profile", Method.POST);
 
+            request.RequestFormat = DataFormat.Json;
+
             request.AddBody(new { name = "Sam" });
 
             request.AddUrlSegment("postid", 1);
 
             //Executes the request
             var response = client.Execute(request);
+
+            var deserialize = new JsonDeserializer();
+            var output = deserialize.Deserialize<Dictionary<string, string>>(response);
+            var result = output["name"];
+
+            Assert.That(result, Is.EqualTo("Raj"), "Author is not correct");
 
         }
     }
