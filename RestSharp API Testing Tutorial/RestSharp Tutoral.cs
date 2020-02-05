@@ -41,6 +41,7 @@ namespace RestSharp_API_Testing_Tutorial
         }
 
         [Test]
+        [Obsolete]
         public void PostWithAnonymousBody()
         {
             //Establishes our client and allows it to connect to the URL
@@ -48,6 +49,9 @@ namespace RestSharp_API_Testing_Tutorial
 
             //POST sends data to the server
             var request = new RestRequest("posts/{postid}/profile", Method.POST);
+
+            request.AddBody(new { name = "Sam" });
+
             request.AddUrlSegment("postid", 1);
 
         }
