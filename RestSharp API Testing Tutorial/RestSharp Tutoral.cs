@@ -46,7 +46,7 @@ namespace RestSharp_API_Testing_Tutorial
             //Establishes our client and allows it to connect to the URL
             var client = new RestClient("http://localhost:3000/");
 
-            //In Postman we can use the GET to specfify specfific data
+            //POST sends data to the server
             var request = new RestRequest("posts/{postid}/profile", Method.POST);
             request.AddUrlSegment("postid", 1);
 
