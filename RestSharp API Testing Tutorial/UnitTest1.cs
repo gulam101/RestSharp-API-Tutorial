@@ -21,6 +21,7 @@ namespace RestSharp_API_Testing_Tutorial
             var request = new RestRequest("posts/{postid}", Method.GET);
             request.AddUrlSegment("postid", 1);
 
+            // Executes the request
             var response = client.Execute(request);
 
             //var deserialize = new JsonDeserializer();
