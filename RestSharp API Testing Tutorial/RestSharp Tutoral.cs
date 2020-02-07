@@ -49,6 +49,7 @@ namespace RestSharp_API_Testing_Tutorial
 
             //POST sends data to the server
             var request = new RestRequest("posts/{postid}/profile", Method.POST);
+            //Specfifes on what data format the data should be used
             request.RequestFormat = DataFormat.Json;
 
             request.AddBody(new { name = "Sam" });
